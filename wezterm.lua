@@ -10,9 +10,13 @@ config.window_decorations = 'NONE'
 -- Set the color scheme
 config.color_scheme = 'Catppuccin Macchiato'
 
+-- initial size
+config.initial_rows = 36
+config.initial_cols = 112
+
 -- Set the font and font size
 config.font = wezterm.font 'JetBrains Mono'
-config.font_size = 12
+config.font_size = 13
 
 -- Configure the window frame (title bar)
 config.window_frame = {
