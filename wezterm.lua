@@ -71,7 +71,7 @@ config.window_padding = {
 }
 
 -- Optional: Set a background image (commented out)
-config.window_background_image = '/home/mahadi/.config/wezterm/itachi.jpg'
+config.window_background_image = '/home/mahadi/.config/wezterm/itachi2.jpg'
 
 -- Configure a gradient background for the window
 -- config.window_background_gradient = {
@@ -92,7 +92,7 @@ config.window_background_image = '/home/mahadi/.config/wezterm/itachi.jpg'
 
 -- Adjust the HSB (Hue, Saturation, Brightness) of the background image
 config.window_background_image_hsb = {
-  brightness = 0.1, -- Reduce brightness
+  brightness = 0.5, -- Reduce brightness
   -- hue = 1, -- Hue adjustment
   -- saturation = 1.2, -- Saturation adjustment
 }
