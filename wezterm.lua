@@ -71,30 +71,30 @@ config.window_padding = {
 }
 
 -- Optional: Set a background image (commented out)
--- config.window_background_image = '/home/mahadi/Pictures/terminal/waifu1.png'
+config.window_background_image = '/home/mahadi/.config/wezterm/itachi.jpg'
 
 -- Configure a gradient background for the window
-config.window_background_gradient = {
-  orientation = 'Horizontal', -- Gradient orientation
-  colors = {
-    '#000033', -- Deep space black
-    '#1C1C3A', -- Dark purple
-    '#4B0082', -- Indigo
-  },
-  interpolation = 'Linear', -- Smooth interpolation
-  blend = 'Rgb', -- Color blending mode
-  -- Optional gradient settings (commented out)
-  -- noise = 64,
-  -- segment_size = 11,
-  -- segment_smoothness = 0.0,
-  -- preset = "Warm",
-}
+-- config.window_background_gradient = {
+--   orientation = 'Horizontal', -- Gradient orientation
+--   colors = {
+--     '#000033', -- Deep space black
+--     '#1C1C3A', -- Dark purple
+--     '#4B0082', -- Indigo
+--   },
+--   interpolation = 'Linear', -- Smooth interpolation
+--   blend = 'Rgb', -- Color blending mode
+--   -- Optional gradient settings (commented out)
+--   -- noise = 64,
+--   -- segment_size = 11,
+--   -- segment_smoothness = 0.0,
+--   -- preset = "Warm",
+-- }
 
 -- Adjust the HSB (Hue, Saturation, Brightness) of the background image
 config.window_background_image_hsb = {
-  brightness = 1.2, -- Reduce brightness
-  hue = 1, -- Hue adjustment
-  saturation = 1.2, -- Saturation adjustment
+  brightness = 0.1, -- Reduce brightness
+  -- hue = 1, -- Hue adjustment
+  -- saturation = 1.2, -- Saturation adjustment
 }
 
 -- Set the opacity of the text background
