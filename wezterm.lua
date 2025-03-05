@@ -92,7 +92,7 @@ config.window_background_image = '/home/mahadi/.config/wezterm/itachi2.jpg'
 
 -- Adjust the HSB (Hue, Saturation, Brightness) of the background image
 config.window_background_image_hsb = {
-  brightness = 0.5, -- Reduce brightness
+  brightness = 0.3, -- Reduce brightness
   -- hue = 1, -- Hue adjustment
   -- saturation = 1.2, -- Saturation adjustment
 }
