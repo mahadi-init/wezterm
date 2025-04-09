@@ -3,17 +3,10 @@ local config = wezterm.config_builder()
 
 config.initial_rows = 36
 config.initial_cols = 112
-config.color_scheme = 'Catppuccin Macchiato'
+config.color_scheme = 'Catppuccin Mocha'
 
 config.font_size = 13
-config.font = wezterm.font 'JetBrains Mono'
-
-config.window_frame = {
-  font = wezterm.font { family = 'JetBrains Mono' },
-  font_size = 12.0,
-  active_titlebar_bg = '#333333',
-  inactive_titlebar_bg = '#333333',
-}
+config.font = wezterm.font('JetBrains Mono', { weight = 'Medium' })
 
 config.colors = {
   tab_bar = {
@@ -33,20 +26,7 @@ config.window_padding = {
   bottom = 0,
 }
 
-config.window_background_gradient = {
-  orientation = 'Horizontal',
-  colors = {
-    '#0F2027',
-    '#203A43',
-    '#2C5364',
-  },
-  interpolation = 'Linear',
-  blend = 'Rgb',
-}
-
-config.window_background_image_hsb = {
-  brightness = 0.3,
-}
+config.color_scheme = 'Catppuccin Mocha'
 
 config.text_background_opacity = 1
 return config
