@@ -19,9 +19,9 @@ config.initial_rows = 36
 config.initial_cols = 112
 config.window_decorations = 'RESIZE' -- "INTEGRATED_BUTTONS|RESIZE"
 config.window_padding = {
-  left = 5,
-  right = 5,
-  top = 5,
+  left = 0,
+  right = 0,
+  top = 12,
   bottom = 2,
 }
 config.window_background_opacity = 0.92 -- Slight transparency
