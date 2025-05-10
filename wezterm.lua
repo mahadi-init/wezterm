@@ -7,11 +7,11 @@ local config = {}
 config.color_scheme = 'Catppuccin Mocha' -- or "Dracula", "Gruvbox Dark", "Tokyo Night"
 config.font = wezterm.font_with_fallback {
   { family = 'JetBrains Mono', weight = 'Medium' },
-  { family = 'Fira Code', weight = 'Regular' }, -- Fallback font
   'Noto Color Emoji', -- For emoji support
 }
+
 config.font_size = 13
-config.line_height = 1.1
+config.line_height = 1.2
 config.cell_width = 1.0 -- Slightly more condensed text
 
 -- Window Appearance
@@ -21,43 +21,19 @@ config.window_decorations = 'RESIZE' -- "INTEGRATED_BUTTONS|RESIZE"
 config.window_padding = {
   left = 0,
   right = 0,
-  top = 12,
-  bottom = 2,
+  top = 10,
+  bottom = 0,
 }
-config.window_background_opacity = 0.92 -- Slight transparency
+config.window_background_opacity = 0.95 -- Slight transparency
 config.text_background_opacity = 1.0
 config.hide_tab_bar_if_only_one_tab = true
 config.adjust_window_size_when_changing_font_size = false
 
 -- Tab Bar Customization
-config.use_fancy_tab_bar = false -- Simpler, more compact tabs
-config.tab_bar_at_bottom = true -- Tabs at the bottom
-config.show_tab_index_in_tab_bar = true -- Show tab numbers (e.g., "1: zsh")
+config.use_fancy_tab_bar = false              -- Simpler, more compact tabs
+config.tab_bar_at_bottom = true               -- Tabs at the bottom
+config.show_tab_index_in_tab_bar = true       -- Show tab numbers (e.g., "1: zsh")
 config.show_new_tab_button_in_tab_bar = false -- Hide the "+" button
-
--- Tab Styling (matches Catppuccin Mocha)
-config.colors = {
-  tab_bar = {
-    background = '#1E1E2E', -- Base background
-    active_tab = {
-      bg_color = '#585B70',
-      fg_color = '#CDD6F4',
-      intensity = 'Bold',
-    },
-    inactive_tab = {
-      bg_color = '#181825',
-      fg_color = '#7F849C',
-    },
-    inactive_tab_hover = {
-      bg_color = '#313244',
-      fg_color = '#CDD6F4',
-    },
-    new_tab = {
-      bg_color = '#1E1E2E',
-      fg_color = '#7F849C',
-    },
-  },
-}
 
 -- Tab Title Format (shows relative path + shell)
 wezterm.on('format-tab-title', function(tab)
@@ -87,25 +63,25 @@ end)
 -- Keybindings
 config.keys = {
   -- Split panes
-  { key = '|', mods = 'CTRL|SHIFT', action = act.SplitHorizontal { domain = 'CurrentPaneDomain' } },
-  { key = '-', mods = 'CTRL|SHIFT', action = act.SplitVertical { domain = 'CurrentPaneDomain' } },
+  { key = '|',   mods = 'CTRL|SHIFT', action = act.SplitHorizontal { domain = 'CurrentPaneDomain' } },
+  { key = '-',   mods = 'CTRL|SHIFT', action = act.SplitVertical { domain = 'CurrentPaneDomain' } },
   -- Tab navigation
-  { key = 'Tab', mods = 'CTRL', action = act.ActivateTabRelative(1) },
+  { key = 'Tab', mods = 'CTRL',       action = act.ActivateTabRelative(1) },
   { key = 'Tab', mods = 'CTRL|SHIFT', action = act.ActivateTabRelative(-1) },
   -- Copy/Paste
-  { key = 'c', mods = 'CTRL|SHIFT', action = act.CopyTo 'Clipboard' },
-  { key = 'v', mods = 'CTRL|SHIFT', action = act.PasteFrom 'Clipboard' },
+  { key = 'c',   mods = 'CTRL|SHIFT', action = act.CopyTo 'Clipboard' },
+  { key = 'v',   mods = 'CTRL|SHIFT', action = act.PasteFrom 'Clipboard' },
   -- Font size adjustments
-  { key = '+', mods = 'CTRL', action = act.IncreaseFontSize },
-  { key = '-', mods = 'CTRL', action = act.DecreaseFontSize },
-  { key = '0', mods = 'CTRL', action = act.ResetFontSize },
+  { key = '+',   mods = 'CTRL',       action = act.IncreaseFontSize },
+  { key = '-',   mods = 'CTRL',       action = act.DecreaseFontSize },
+  { key = '0',   mods = 'CTRL',       action = act.ResetFontSize },
 }
 
 -- Mouse & Cursor
-config.default_cursor_style = 'BlinkingBar' -- "SteadyBlock", "BlinkingUnderline"
-config.cursor_blink_rate = 500 -- Blink speed (ms)
+config.default_cursor_style = 'SteadyBlock' -- "SteadyBlock", "BlinkingUnderline"
+config.cursor_blink_rate = 500              -- Blink speed (ms)
 config.enable_scroll_bar = true
-config.scrollback_lines = 5000 -- More scrollback history
+config.scrollback_lines = 5000              -- More scrollback history
 config.mouse_bindings = {
   -- Ctrl+Click opens links
   {
