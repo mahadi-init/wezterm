@@ -24,7 +24,7 @@ config.window_padding = {
   top = 10,
   bottom = 0,
 }
-config.window_background_opacity = 0.95 -- Slight transparency
+config.window_background_opacity = 0.90 -- Slight transparency
 config.text_background_opacity = 1.0
 config.hide_tab_bar_if_only_one_tab = true
 config.adjust_window_size_when_changing_font_size = false
