@@ -24,15 +24,15 @@ config.window_padding = {
   top = 10,
   bottom = 0,
 }
-config.window_background_opacity = 0.90 -- Slight transparency
+config.window_background_opacity = 0.85 -- Slight transparency
 config.text_background_opacity = 1.0
 config.hide_tab_bar_if_only_one_tab = true
 config.adjust_window_size_when_changing_font_size = false
 
 -- Tab Bar Customization
-config.use_fancy_tab_bar = false              -- Simpler, more compact tabs
-config.tab_bar_at_bottom = true               -- Tabs at the bottom
-config.show_tab_index_in_tab_bar = true       -- Show tab numbers (e.g., "1: zsh")
+config.use_fancy_tab_bar = false -- Simpler, more compact tabs
+config.tab_bar_at_bottom = true -- Tabs at the bottom
+config.show_tab_index_in_tab_bar = true -- Show tab numbers (e.g., "1: zsh")
 config.show_new_tab_button_in_tab_bar = false -- Hide the "+" button
 
 -- Tab Title Format (shows relative path + shell)
@@ -63,25 +63,25 @@ end)
 -- Keybindings
 config.keys = {
   -- Split panes
-  { key = '|',   mods = 'CTRL|SHIFT', action = act.SplitHorizontal { domain = 'CurrentPaneDomain' } },
-  { key = '-',   mods = 'CTRL|SHIFT', action = act.SplitVertical { domain = 'CurrentPaneDomain' } },
+  { key = '|', mods = 'CTRL|SHIFT', action = act.SplitHorizontal { domain = 'CurrentPaneDomain' } },
+  { key = '-', mods = 'CTRL|SHIFT', action = act.SplitVertical { domain = 'CurrentPaneDomain' } },
   -- Tab navigation
-  { key = 'Tab', mods = 'CTRL',       action = act.ActivateTabRelative(1) },
+  { key = 'Tab', mods = 'CTRL', action = act.ActivateTabRelative(1) },
   { key = 'Tab', mods = 'CTRL|SHIFT', action = act.ActivateTabRelative(-1) },
   -- Copy/Paste
-  { key = 'c',   mods = 'CTRL|SHIFT', action = act.CopyTo 'Clipboard' },
-  { key = 'v',   mods = 'CTRL|SHIFT', action = act.PasteFrom 'Clipboard' },
+  { key = 'c', mods = 'CTRL|SHIFT', action = act.CopyTo 'Clipboard' },
+  { key = 'v', mods = 'CTRL|SHIFT', action = act.PasteFrom 'Clipboard' },
   -- Font size adjustments
-  { key = '+',   mods = 'CTRL',       action = act.IncreaseFontSize },
-  { key = '-',   mods = 'CTRL',       action = act.DecreaseFontSize },
-  { key = '0',   mods = 'CTRL',       action = act.ResetFontSize },
+  { key = '+', mods = 'CTRL', action = act.IncreaseFontSize },
+  { key = '-', mods = 'CTRL', action = act.DecreaseFontSize },
+  { key = '0', mods = 'CTRL', action = act.ResetFontSize },
 }
 
 -- Mouse & Cursor
 config.default_cursor_style = 'SteadyBlock' -- "SteadyBlock", "BlinkingUnderline"
-config.cursor_blink_rate = 500              -- Blink speed (ms)
+config.cursor_blink_rate = 500 -- Blink speed (ms)
 config.enable_scroll_bar = true
-config.scrollback_lines = 5000              -- More scrollback history
+config.scrollback_lines = 5000 -- More scrollback history
 config.mouse_bindings = {
   -- Ctrl+Click opens links
   {
